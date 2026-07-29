@@ -32,3 +32,32 @@ Tracer covering VLANs, trunking, dynamic routing, and remote access.
 
 ---
 
+## Lab 2 — OSPF Dynamic Routing
+
+<img width="1893" height="710" alt="ospf-topology" src="https://github.com/user-attachments/assets/d3666924-61c8-4ffe-a369-99e962626184" />
+
+### Topology
+- 3x Cisco 1941 Routers
+- 2x Cisco 2960-24TT Access Switches
+- 4x End devices (PC0-PC3)
+
+### Network Addressing
+- `172.20.1.0/24` — Left LAN
+- `10.12.0.0/24` — WAN link Router0 to Router1 (serial)
+- `10.23.0.0/24` — Link Router1 to Router2
+- `172.20.3.0/24` — Right LAN
+
+### Concepts Demonstrated
+- OSPF dynamic routing protocol — routers automatically 
+  share routing information
+- Serial WAN links between routers
+- Multiple network segments routed through OSPF
+- End-to-end connectivity across three routers
+
+### What I Learned
+- OSPF automatically discovers routes — no manual static 
+  route configuration needed
+- Each router advertises its directly connected networks 
+  to OSPF neighbors
+- Serial links simulate WAN connections between sites
+- Routers in the same OSPF area share a complete topology map
