@@ -7,11 +7,7 @@ Tracer covering VLANs, trunking, dynamic routing, and remote access.
 
 ## Lab 1 — VLAN and Trunking
 
-
-
-![Topology](vlan-trunking-topology.png)
-
-
+<img width="1896" height="712" alt="vlan-trunking-toplogy" src="https://github.com/user-attachments/assets/4be1273e-5fd6-408d-bffd-8eab684b0a18" />
 
 ### Topology
 - 1x Cisco 1941 Router
