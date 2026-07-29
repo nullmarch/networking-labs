@@ -85,3 +85,56 @@ Tracer covering VLANs, trunking, dynamic routing, and remote access.
 - Both require VTY line configuration on the device
 - SSH requires a hostname, domain name, and RSA key 
   to be generated before it works
+
+  ## Lab 4 — Manual IP Addressing vs DHCP
+
+<img width="1902" height="713" alt="dhcp-wan-topology" src="https://github.com/user-attachments/assets/965213cd-3f1a-4c06-9252-85cdfa39934c" />
+
+
+### Topology
+Three geographically named sites connected via WAN serial links 
+through a hub router (OR):
+
+- **Réseau 1 (172.16.0.0/24)** — Site SB, PC A
+- **Réseau 2 (172.16.1.0/24)** — Site TL, PC C  
+- **Réseau 3 (172.16.2.0/24)** — Site AL, PC B
+- **Internet** — simulated via dedicated router
+
+**WAN serial links using /30 subnets:**
+- `10.10.10.0/30` — SBA to OR
+- `10.10.10.4/30` — TL to OR
+- `10.10.10.8/30` — OR to AL
+- `10.10.10.12/30` — AL to Internet
+
+### Two Versions of This Lab
+
+**Version 1 — Manual Addressing:**
+Static IP addresses configured manually on every device — 
+each PC, router interface, and switch assigned fixed addresses.
+
+**Version 2 — DHCP:**
+Router configured as DHCP server, automatically assigning 
+IP addresses to end devices on each LAN.
+
+### Why /30 on Serial Links
+Serial links connect exactly two router interfaces — 
+no other hosts will ever exist on that segment. /30 
+provides exactly 2 usable host addresses, wasting 
+the minimum number of addresses.
+
+### Concepts Demonstrated
+- Static IP addressing vs dynamic DHCP assignment
+- WAN topology with hub-and-spoke design
+- Serial link subnetting with /30 masks
+- DHCP server configuration on a router
+- Multi-site routing across WAN links
+
+### What I Learned
+- Manual addressing gives full control but doesn't scale — 
+  every device needs individual configuration
+- DHCP eliminates manual configuration — devices request 
+  and receive addresses automatically
+- /30 subnets are specifically chosen for point-to-point 
+  links to minimize address waste
+- Router DHCP pools must exclude the router's own interface 
+  address to avoid conflicts
