@@ -1,7 +1,8 @@
 # Networking Labs — Cisco Packet Tracer
 
 A collection of hands-on networking labs built in Cisco Packet 
-Tracer covering VLANs, trunking, dynamic routing, and remote access.
+Tracer covering VLANs, trunking, dynamic routing, remote access, 
+and WAN addressing.
 
 ---
 
