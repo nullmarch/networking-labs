@@ -61,3 +61,27 @@ Tracer covering VLANs, trunking, dynamic routing, and remote access.
   to OSPF neighbors
 - Serial links simulate WAN connections between sites
 - Routers in the same OSPF area share a complete topology map
+
+## Lab 3 — Remote Access (SSH and Telnet)
+
+<img width="1900" height="717" alt="ssh-telnet-topology" src="https://github.com/user-attachments/assets/2d20cb3f-c194-4c7e-b1e3-847562d3c4c9" />
+
+### Topology
+- 3x Cisco 3560-24PS Multilayer Switches
+- 6x End devices (PC0-PC5)
+- Trunk links between central and edge switches
+
+### Concepts Demonstrated
+- Telnet configuration for remote device management
+- SSH configuration for secure remote access
+- Difference between Telnet (plain text) and SSH (encrypted)
+- Remote CLI access to network devices from end hosts
+
+### What I Learned
+- Telnet transmits credentials in plain text — 
+  vulnerable to interception
+- SSH encrypts the entire session — industry standard 
+  for secure remote management
+- Both require VTY line configuration on the device
+- SSH requires a hostname, domain name, and RSA key 
+  to be generated before it works
